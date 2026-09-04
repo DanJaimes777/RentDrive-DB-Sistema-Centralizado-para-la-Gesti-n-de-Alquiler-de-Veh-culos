@@ -5,7 +5,7 @@
 ## 📌 Integrantes del Proyecto
 * **Estudiante 1** - Paula Rodriguez- 2242745
 * **Estudiante 2** - Carmen Montero- 2242728
-* **Estudiante 3** - Daniel Angulo- 22427
+* **Estudiante 3** - Daniel Angulo- 2242864
 * **Estudiante 4** - David Castro- 2242744
 * **Estudiante 5** - Dana Jaimes- 2242738
 ## 🎯 Objetivo del Proyecto
