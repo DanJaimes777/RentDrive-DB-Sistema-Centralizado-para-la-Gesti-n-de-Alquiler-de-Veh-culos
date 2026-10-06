@@ -1,23 +1,21 @@
-RentDrive-DB: Sistema Centralizado para la Gestión de Alquiler de Vehículos
+# RentDrive-DB
 
-¡Bienvenid@s al repositorio de nuestro proyecto final de Bases de Datos! Este repositorio contiene el diseño, modelado e implementación de la base de datos para una plataforma digital optimizada en la gestión y control de alquiler de vehículos.
+Sistema de gestión y control para el alquiler de vehículos. Proyecto desarrollado para la asignatura de **Bases de Datos**.
 
- Integrantes del Proyecto
-* **Estudiante 1** - Paula Rodriguez- 2242745
-* **Estudiante 2** - Carmen Montero- 2242728
-* **Estudiante 3** - Daniel Angulo- 2242864
-* **Estudiante 4** - David Castro- 2242744
-* **Estudiante 5** - Dana Jaimes- 2242738
-  
-Objetivo del Proyecto
-Diseñar e implementar un modelo de base de datos eficiente y normalizado que permita administrar de forma segura la información de clientes, el catálogo de vehículos disponibles, los contratos de alquiler, las sucursales y los registros de pagos.
+## Integrantes
+- Paula Rodriguez — 2242745
+- Carmen Montero — 2242728
+- Daniel Angulo — 2242864
+- David Castro — 2242744
+- Dana Jaimes — 2242738
 
- Tecnologías y Herramientas Utilizadas
-En proceso...
-* **Control de Versiones:** Git & GitHub
-## 📊 Componentes del Repositorio
-En este proyecto encontrarás los siguientes recursos principales:
-En proceso...
+## Descripción del Proyecto
+Diseño, modelado e implementación de una base de datos relacional orientada a centralizar la administración de una empresa de alquiler de vehículos. El sistema gestiona:
+- Registro y catálogo de vehículos disponibles por sucursal.
+- Control de clientes y contratos de alquiler.
+- Historial de pagos y facturación.
 
-## 🚀 Cómo ejecutar el proyecto
-En proceso
+## Tecnologías Utilizadas
+- **Modelado:** Draw.io / ERD
+- **Control de Versiones:** Git & GitHub
+
