@@ -9,7 +9,7 @@ CREATE TABLE membresia (
     descuento    DECIMAL(5,2)  NOT NULL,
     duracion     INT           NOT NULL,
     beneficios   VARCHAR(255),
-    PRIMARY KEY (id_memebresia)
+    PRIMARY KEY (id_membresia)
 );
 
 CREATE TABLE ciudad (
