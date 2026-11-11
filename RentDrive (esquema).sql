@@ -79,3 +79,68 @@ CREATE TABLE alquila (
     FOREIGN KEY (id_vehiculo) REFERENCES vehiculo(id_vehiculo),
     FOREIGN KEY (id_usuario) REFERENCES usuario(id_usuario)
 );
+
+INSERT INTO membresia (precio, descuento, duracion, beneficios) VALUES
+(50000.00, 5.00, 1, 'Descuento en alquileres y atencion prioritaria'),
+(120000.00, 10.00, 3, 'Descuento en alquileres y un conductor adicional gratis'),
+(220000.00, 15.00, 6, 'Descuento en alquileres, conductor adicional y cancelacion gratis'),
+(400000.00, 20.00, 12, 'Descuento en alquileres, seguro incluido y vehiculo de reemplazo'),
+(650000.00, 25.00, 24, 'Todos los beneficios y mantenimiento incluido');
+
+/* id_ciudad: 1 Bucaramanga, 2 Bogota, 3 Medellin, 4 Cali, 5 Barranquilla */
+INSERT INTO ciudad (nombre) VALUES
+('Bucaramanga'),
+('Bogota'),
+('Medellin'),
+('Cali'),
+('Barranquilla');
+
+/* ids 1 a 5: Ocasionales ('O') | ids 6 a 10: Empresariales ('E') */
+INSERT INTO usuario (telefono, direccion, id_membresia, tipo) VALUES
+('3101234567', 'Carrera 27 # 45-10', 1, 'O'),
+('3207654321', 'Calle 36 # 15-22', NULL, 'O'),
+('3159876543', 'Avenida Libertadores # 8-31', 3, 'O'),
+('3012345678', 'Carrera 33 # 52-14', 2, 'O'),
+('3186543210', 'Calle 52 # 23-40', NULL, 'O'),
+('3112223344', 'Carrera 29 # 41-05', 4, 'E'),
+('3223334455', 'Calle 72 # 10-34', 5, 'E'),
+('3134445566', 'Avenida Libertadores # 20-15', NULL, 'E'),
+('3045556677', 'Calle 5 # 38-20', 3, 'E'),
+('3156667788', 'Carrera 51 # 80-15', NULL, 'E');
+
+INSERT INTO ocasional (id_usuario, dni, nombre, apellido) VALUES
+(1, '1098123456', 'Carlos', 'Ruiz'),
+(2, '1098765432', 'Ana', 'Torres'),
+(3, '1005555123', 'Luis', 'Pardo'),
+(4, '1098444789', 'Maria', 'Gomez'),
+(5, '1005987654', 'Andres', 'Rojas');
+
+INSERT INTO empresarial (id_usuario, nit, razon_social) VALUES
+(6,  '9001234561', 'Transportes Andinos S.A.S.'),
+(7,  '9002345672', 'Constructora Horizonte Ltda.'),
+(8,  '9003456783', 'Logistica Express S.A.S.'),
+(9,  '9004567894', 'Inversiones del Caribe S.A.'),
+(10, '9005678905', 'Turismo y Aventura S.A.S.');
+
+INSERT INTO vehiculo (matricula, tipo, precio, id_ciudad) VALUES
+('BGA123', 'Automovil',   150000.00, 1),
+('BOG456', 'Camioneta',   250000.00, 2),
+('MED789', 'Motocicleta',  60000.00, 3),
+('CAL321', 'Van',         300000.00, 4),
+('BAQ654', 'Automovil',   140000.00, 5),
+('BGA987', 'Camioneta',   260000.00, 1);
+
+INSERT INTO reserva (fecha_inicio, fecha_fin, estado, id_usuario, id_vehiculo) VALUES
+('2026-11-15', '2026-11-18', 'Confirmada', 1, 1),
+('2026-11-20', '2026-11-25', 'Pendiente',  6, 2),
+('2026-10-05', '2026-10-08', 'Finalizada', 3, 3),
+('2026-11-12', '2026-11-14', 'Cancelada',  2, 4),
+('2026-12-01', '2026-12-10', 'Confirmada', 7, 5),
+('2026-10-20', '2026-10-22', 'Finalizada', 8, 6);
+
+INSERT INTO alquila (id_vehiculo, id_usuario, fecha_inicio, fecha_fin, factura) VALUES
+(3, 3,  '2026-10-05', '2026-10-08', 'FAC-0001'),
+(6, 8,  '2026-10-20', '2026-10-22', 'FAC-0002'),
+(1, 1,  '2026-09-10', '2026-09-13', 'FAC-0003'),
+(2, 9,  '2026-09-15', '2026-09-20', 'FAC-0004'),
+(4, 5,  '2026-08-01', '2026-08-05', 'FAC-0005');
