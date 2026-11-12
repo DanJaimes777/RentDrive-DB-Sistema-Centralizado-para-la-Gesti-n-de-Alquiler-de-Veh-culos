@@ -87,7 +87,7 @@ INSERT INTO membresia (precio, descuento, duracion, beneficios) VALUES
 (400000.00, 20.00, 12, 'Descuento en alquileres, seguro incluido y vehiculo de reemplazo'),
 (650000.00, 25.00, 24, 'Todos los beneficios y mantenimiento incluido');
 
-/* id_ciudad: 1 Bucaramanga, 2 Bogota, 3 Medellin, 4 Cali, 5 Barranquilla */
+
 INSERT INTO ciudad (nombre) VALUES
 ('Bucaramanga'),
 ('Bogota'),
@@ -95,7 +95,7 @@ INSERT INTO ciudad (nombre) VALUES
 ('Cali'),
 ('Barranquilla');
 
-/* ids 1 a 5: Ocasionales ('O') | ids 6 a 10: Empresariales ('E') */
+
 INSERT INTO usuario (telefono, direccion, id_membresia, tipo) VALUES
 ('3101234567', 'Carrera 27 # 45-10', 1, 'O'),
 ('3207654321', 'Calle 36 # 15-22', NULL, 'O'),
