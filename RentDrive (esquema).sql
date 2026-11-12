@@ -144,3 +144,60 @@ INSERT INTO alquila (id_vehiculo, id_usuario, fecha_inicio, fecha_fin, factura) 
 (1, 1,  '2026-09-10', '2026-09-13', 'FAC-0003'),
 (2, 9,  '2026-09-15', '2026-09-20', 'FAC-0004'),
 (4, 5,  '2026-08-01', '2026-08-05', 'FAC-0005');
+
+
+SELECT o.nombre, o.apellido, u.telefono
+FROM ocasional o
+JOIN usuario u ON o.id_usuario = u.id_usuario
+WHERE o.nombre LIKE 'A%';
+
+SELECT v.matricula, v.tipo, v.precio, c.nombre AS ciudad
+FROM vehiculo v
+JOIN ciudad c ON v.id_ciudad = c.id_ciudad
+WHERE v.precio BETWEEN 100000 AND 250000;
+
+SELECT e.razon_social, m.descuento, m.beneficios
+FROM empresarial e
+JOIN usuario u ON e.id_usuario = u.id_usuario
+LEFT JOIN membresia m ON u.id_membresia = m.id_membresia
+WHERE e.razon_social LIKE '%S.A.S.%';
+
+
+SELECT r.id_reserva, r.estado, v.matricula
+FROM reserva r
+JOIN vehiculo v ON r.id_vehiculo = v.id_vehiculo
+WHERE r.fecha_inicio >= '2026-11-01' AND r.fecha_inicio <= '2026-11-30';
+
+
+SELECT id_membresia, precio, beneficios
+FROM membresia
+WHERE precio < 300000 AND beneficios LIKE '%conductor%';
+
+
+SELECT a.factura, v.matricula, v.tipo, a.fecha_inicio
+FROM alquila a
+JOIN vehiculo v ON a.id_vehiculo = v.id_vehiculo
+WHERE a.fecha_inicio > '2026-09-30';
+
+SELECT v.matricula, v.tipo, v.precio, c.nombre AS ciudad
+FROM vehiculo v
+JOIN ciudad c ON v.id_ciudad = c.id_ciudad
+WHERE v.tipo LIKE 'C%' AND v.precio > 200000;
+
+SELECT r.estado, o.nombre, o.apellido, r.fecha_inicio
+FROM reserva r
+JOIN usuario u ON r.id_usuario = u.id_usuario
+JOIN ocasional o ON u.id_usuario = o.id_usuario
+WHERE r.estado LIKE '%ada';
+
+SELECT u.id_usuario, u.direccion, m.duracion
+FROM usuario u
+LEFT JOIN membresia m ON u.id_membresia = m.id_membresia
+WHERE m.duracion IS NULL OR m.duracion < 6;
+
+
+SELECT e.razon_social, a.factura, a.fecha_inicio, a.fecha_fin
+FROM alquila a
+JOIN usuario u ON a.id_usuario = u.id_usuario
+JOIN empresarial e ON u.id_usuario = e.id_usuario
+WHERE a.fecha_fin < '2026-10-31';
